@@ -1,5 +1,5 @@
 <div align="center">
-  <span align="center"> <img width="80" height="70" class="center" src="https://github.com/aggalex/OfficeWorks-Author/blob/master/data/images/com.github.aggalex.Wineglass.png" alt="Icon"></span>
+  <span align="center"> <img class="center" src="https://github.com/aggalex/Wineglass/blob/master/data/images/com.github.aggalex.Wineglass.svg" alt="Icon"></span>
   <h1 align="center">Wineglass</h1>
   <h3 align="center">A GUI for Wine</h3>
 </div>
@@ -13,17 +13,17 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/aggalex/OfficeWorks-Author/blob/master/LICENSE">
+  <a href="https://github.com/aggalex/Wineglass/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-GPL-3.0-blue.svg">
   </a>
-  <a href="https://github.com/aggalex/OfficeWorks-Author/releases">
+  <a href="https://github.com/aggalex/Wineglass/releases">
     <img src="https://img.shields.io/badge/Release-v%201.0.0-orange.svg">
   </a>
 </p>
 
 <p align="center">
-    <img  src="https://github.com/aggalex/OfficeWorks-Author/blob/master/data/images/screenshot.png" alt="Screenshot"> <br>
-  <a href="https://github.com/aggalex/OfficeWorks-Author/issues/new"> Report a problem! </a>
+    <img  src="https://github.com/aggalex/Wineglass/blob/master/data/images/screenshot.png" alt="Screenshot"> <br>
+  <a href="https://github.com/aggalex/Wineglass/issues/new"> Report a problem! </a>
 </p>
 
 ## Installation
@@ -43,7 +43,7 @@ Use the App script to simplify installation by running `./app install-deps`
  ### Building
 
 ```
-git clone https://github.com/aggalex/OfficeWorks-Author.git com.github.aggalex.Wineglass && cd com.github.aggalex.Wineglass
+git clone https://github.com/aggalex/Wineglass.git com.github.aggalex.Wineglass && cd com.github.aggalex.Wineglass
 ./app install-deps && ./app install
 ```
 
@@ -76,13 +76,13 @@ Options:
 
 To help, access the links below:
 
-- [Guide on Code Style](https://github.com/aggalex/OfficeWorks-Author/wiki/Guide-on-code-style)
+- [Guide on Code Style](https://github.com/aggalex/Wineglass/wiki/Guide-on-code-style)
 
-- [Proposing Design Changes](https://github.com/aggalex/OfficeWorks-Author/wiki/Proposing-Design-Changes)
+- [Proposing Design Changes](https://github.com/aggalex/Wineglass/wiki/Proposing-Design-Changes)
 
-- [Reporting Bugs](https://github.com/aggalex/OfficeWorks-Author/wiki/Reporting-Bugs)
+- [Reporting Bugs](https://github.com/aggalex/Wineglass/wiki/Reporting-Bugs)
 
-- [Translate](https://github.com/aggalex/OfficeWorks-Author/wiki/Translate)
+- [Translate](https://github.com/aggalex/Wineglass/wiki/Translate)
 
 
 ### License
