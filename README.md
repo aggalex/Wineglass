@@ -1,5 +1,5 @@
 <div align="center">
-  <span align="center"> <img class="center" src="https://github.com/aggalex/Wineglass/blob/master/data/images/com.github.aggalex.Wineglass.svg" alt="Icon"></span>
+  <span align="center"> <img class="center" src="https://github.com/aggalex/Wineglass/blob/master/data/Images/com.github.aggalex.Wineglass.svg" alt="Icon"></span>
   <h1 align="center">Wineglass</h1>
   <h3 align="center">A GUI for Wine</h3>
 </div>
@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-    <img  src="https://github.com/aggalex/Wineglass/blob/master/data/images/screenshot.png" alt="Screenshot"> <br>
+    <img  src="https://github.com/aggalex/Wineglass/blob/master/data/Images/screenshot.png" alt="Screenshot"> <br>
   <a href="https://github.com/aggalex/Wineglass/issues/new"> Report a problem! </a>
 </p>
 
