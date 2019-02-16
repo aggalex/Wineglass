@@ -35,41 +35,22 @@ These dependencies must be present before building:
  - `debhelper`
  - `libgranite-dev`
  - `libgtk-3-dev`
- - `gdk-pixbuf-2.0`
 
 
-Use the App script to simplify installation by running `./app install-deps`
- 
- ### Building
 
+### Building
+After installing all the required dependencies, you can build Wineglass using:
 ```
 git clone https://github.com/aggalex/Wineglass.git com.github.aggalex.Wineglass && cd com.github.aggalex.Wineglass
-./app install-deps && ./app install
+meson build
+meson configure -Dprefix=/usr
+ninja install
 ```
 
 ### Deconstruct
-
+Go to the build folder and run:
 ```
-./app uninstall
-```
-
-### Development & Testing
-
-Wineglass includes a script to simplify the development process. This script can be accessed in the main project directory through `./app`.
-
-```
-Usage:
-  ./app [OPTION]
-
-Options:
-  clean             Removes build directories (can require sudo)
-  generate-i18n     Generates .pot and .po files for i18n (multi-language support)
-  install           Builds and installs application to the system (requires sudo)
-  install-deps      Installs missing build dependencies
-  run               Builds and runs the application
-  test              Builds and runs testing for the application
-  test-run          Builds application, runs testing and if successful application is started
-  uninstall         Removes the application from the system (requires sudo)
+ninja uninstall
 ```
 
 ### Contributing
