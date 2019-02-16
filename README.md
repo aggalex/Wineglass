@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-    <img  src="https://github.com/aggalex/Wineglass/blob/master/data/Images/screenshot.png" alt="Screenshot"> <br>
+    <img  src="https://github.com/aggalex/Wineglass/blob/master/data/Images/Screenshot.png" alt="Screenshot"> <br>
   <a href="https://github.com/aggalex/Wineglass/issues/new"> Report a problem! </a>
 </p>
 
