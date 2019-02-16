@@ -124,7 +124,9 @@ namespace Wineglass {
         public static void create_prefix (string name) throws RunError {
             //create a wine prefix here
             print ("name\n");
-            run.begin("scripts/newPrefix.sh " + GLib.Environment.get_home_dir () + "/.wineprefixes/" + name + " ", 
+            var home = GLib.Environment.get_home_dir ();
+            var prefixdir = home + "/.wineprefixes/" + name;
+            run.begin("mkdir \"" + prefixdir + "\" && WINEPREFIX=\"" + prefixdir + "\" wine wineboot ",
             (obj, res) => {
                 int status = run.end (res);
                 if (status != 0) {

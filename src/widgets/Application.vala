@@ -30,7 +30,7 @@ namespace Wineglass {
 
         public Application () {
             Object(
-                application_id: "com.github.Wineglass", 
+                application_id: "com.github.aggalex.Wineglass", 
                 flags: ApplicationFlags.FLAGS_NONE
             );
         }

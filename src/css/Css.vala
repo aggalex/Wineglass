@@ -23,12 +23,14 @@ using Granite.Widgets;
 using Gtk;
 
 namespace Wineglass {
+
     public class Css : Gtk.HeaderBar {
 
         public Css () {
             var css_provider = new Gtk.CssProvider ();
+            var css_data = Constants.INSTALL_PREFIX + "/share/wineglass/style.css";
             try {
-                css_provider.load_from_path ("css/style.css");
+                css_provider.load_from_path (css_data);
             } catch (Error e) {
                 stderr.printf ("Failed laoding css provider: " + e.message + "\n");
             }

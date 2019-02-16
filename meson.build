@@ -1,5 +1,5 @@
 # project name and programming language
-project('com.github.Wineglass', 'vala', 'c', version: '0.1.0')
+project('com.github.aggalex.Wineglass', 'vala', 'c', version: '0.1.0')
 
 message ('project name and programming language')
 
@@ -27,15 +27,14 @@ message ('Listing dependencies')
 
 dependencies = [
     dependency('gio-unix-2.0', version: '>=2.20'),
+    meson.get_compiler('vala').find_library('posix'),
     dependency('granite'),
-    dependency('posix'),
-    dependency('wine'),
 ]
 
 # Adds subfolders specific build system
 message ('Adds subfolders specific build system')
 
-icon_sizes = ['128', '256']
+icon_sizes = ['16', '24', '36', '48', '64', '128', '256']
 
 foreach i : icon_sizes
     install_data(
@@ -47,6 +46,11 @@ foreach i : icon_sizes
         install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
 endforeach
+
+install_data(
+    'src/css/style.css',
+    install_dir: join_paths(get_option('datadir'), 'wineglass')
+)
 
 config_data = configuration_data()
 config_data.set('EXEC_NAME', meson.project_name())
@@ -85,10 +89,26 @@ appstream_file = i18n.merge_file(
     install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
+message ('Configuring config file: config.vala')
+
+configure_file(
+    input: join_paths ('config.vala.in'),
+    output: 'config.vala',
+    configuration: conf_data
+)
+
 message ('Adds files to build')
 
 code_files = files(
-    'src/Application.vala'
+    'build/config.vala',
+    'src/widgets/AppsList.vala',
+    'src/widgets/Headerbar.vala',
+    'src/widgets/MainBox.vala',
+    'src/widgets/NamePopover.vala',
+    'src/widgets/SettingsButton.vala',
+    'src/widgets/Application.vala',
+    'src/Actions.vala',
+    'src/css/Css.vala'
 )
 
 message ('Defines executable')

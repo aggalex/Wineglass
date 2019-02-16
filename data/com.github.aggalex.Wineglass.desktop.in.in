@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Wineglass
+Comment=A GUI for Wine
+GenericName=Wine Frontent
+Exec=@EXEC_NAME@ %U
+Icon=com.github.aggalex.Wineglass
+Terminal=false
+Categories=Utility;GTK;
+Keywords=Wine;Windows;run;exe;app;

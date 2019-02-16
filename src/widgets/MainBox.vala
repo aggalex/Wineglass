@@ -50,7 +50,11 @@ namespace Wineglass {
 
             print (this.get_visible_child_name ());
 
-            this.set_visible_child_name ("Welcome");
+            if (AppsList.get_children_num() == 0) {
+                this.set_visible_child_name ("Welcome");
+            } else {
+                this.set_visible_child_name ("AppsList");
+            }
 
             print (this.get_visible_child_name ());
 

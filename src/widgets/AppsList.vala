@@ -39,6 +39,11 @@ namespace Wineglass {
             }
         }
 
+        public int get_children_num () {
+            print (children_number.to_string());
+            return children_number;
+        }
+
         public void NewEntry (string AppName) {
             var row = new Gtk.ListBoxRow ();
             var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
