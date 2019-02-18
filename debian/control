@@ -1,4 +1,4 @@
-Source: com.github.aggalex.Wineglass
+Source: com.github.aggalex.wineglass
 Section: utils
 Priority: optional
 Maintainer: Alex Angelou <ubuntu1aggelalex@gmail.com>
@@ -11,7 +11,7 @@ Build-Depends: meson,
                wine64,
                winetricks
 
-Package: com.github.aggalex.Wineglass
+Package: com.github.aggalex.wineglass
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
