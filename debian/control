@@ -7,12 +7,10 @@ Build-Depends: meson,
                libgranite-dev,
                libgtk-3-dev,
                valac,
-               libgtksourceview-3.0-dev,
-               wine64,
-               winetricks
+               libgtksourceview-3.0-dev
 
 Package: com.github.aggalex.wineglass
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, wine | wine-development | wine-stable
 Pre-Depends: dpkg (>= 1.15.6)
 Description: A GUI for Wine
