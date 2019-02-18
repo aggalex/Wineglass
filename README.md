@@ -38,7 +38,6 @@ These dependencies must be present before building:
  - `wine`
 
 
-
 ### Building
 After installing all the required dependencies, you can build Wineglass using:
 ```

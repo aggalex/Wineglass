@@ -1,0 +1,18 @@
+Source: com.github.aggalex.Wineglass
+Section: utils
+Priority: optional
+Maintainer: Alex Angelou <ubuntu1aggelalex@gmail.com>
+Build-Depends: meson,
+               debhelper (>= 10.5.1),
+               libgranite-dev,
+               libgtk-3-dev,
+               valac,
+               libgtksourceview-3.0-dev,
+               wine64,
+               winetricks
+
+Package: com.github.aggalex.Wineglass
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Description: A GUI for Wine

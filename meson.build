@@ -29,6 +29,7 @@ dependencies = [
     dependency('gio-unix-2.0', version: '>=2.20'),
     meson.get_compiler('vala').find_library('posix'),
     dependency('granite'),
+    dependency('winehq-stable', version: '>=3.0')
 ]
 
 # Adds subfolders specific build system
