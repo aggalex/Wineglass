@@ -100,7 +100,7 @@ configure_file(
 message ('Adds files to build')
 
 code_files = files(
-    'build/config.vala',
+    'config.vala',
     'src/widgets/AppsList.vala',
     'src/widgets/Headerbar.vala',
     'src/widgets/MainBox.vala',
