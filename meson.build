@@ -91,16 +91,20 @@ appstream_file = i18n.merge_file(
 
 message ('Configuring config file: config.vala')
 
-configure_file(
+valaconf = configure_file(
     input: join_paths ('config.vala.in'),
-    output: 'config.vala',
+    output: 'conf.vala',
     configuration: conf_data
 )
+
+valaconfpath = join_paths (meson.build_root(), 'conf.vala').split(meson.source_root() + '/')[1]
 
 message ('Adds files to build')
 
 code_files = files(
-    'config.vala',
+    #'@0@/@1@'.format(meson.build_root(), valaconf),
+    #join_paths (meson.build_root(), 'conf.vala'),
+    valaconfpath,
     'src/widgets/AppsList.vala',
     'src/widgets/Headerbar.vala',
     'src/widgets/MainBox.vala',
