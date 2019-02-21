@@ -21,7 +21,7 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	mkdir -p debian/build
-	cd debian/build && meson ../..
+	meson debian/build
 	meson configure -Dprefix=/usr
 
 override_dh_auto_build:
