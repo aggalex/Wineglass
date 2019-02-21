@@ -5,9 +5,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_group>Alex</project_group>
   <project_license>GPL-3.0+</project_license>
-  <name></name>
-  <summary></summary>
-  <description></description>
+  <name>Wineglass</name>
+  <summary>A GUI for Wine</summary>
+  <description>Wineglass is a small application that allows the user to manage his wineprefixes easily and install windows programs without the need of the terminal. It can easily create and remove wineprefixes and install windows apps on their corresponding wineprefix while making them available normally through the applications menu. It also provides an easy way to add windows libraries to wineprefixes through "winetricks".</description>
   <releases>
     <release version="0.0.1" date="2018-05-05"/>
   </releases>
@@ -44,12 +44,18 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <developer_name>Alex</developer_name>
-  <url type="homepage"></url>
-  <url type="bugtracker">http://github.com//Wineglass/issues</url>
-  <url type="help">http://github.com//Wineglass/issues</url>
+  <url type="homepage">http://github.com/aggalex/Wineglass/</url>
+  <url type="bugtracker">http://github.com/aggalex/Wineglass/issues</url>
+  <url type="help">http://github.com/aggalex/Wineglass/issues</url>
   <update_contact>ubuntu1aggelalex_AT_gmail.com</update_contact>
   <screenshots>
     <screenshot type="default">
+      <image>https://raw.githubusercontent.com/aggalex/Wineglass/master/data/Images/Screenshot.png</image>
     </screenshot>
   </screenshots>
+  <custom>
+    <value key="x-appcenter-color-primary">@STRAWBERRY_900</value>
+    <value key="x-appcenter-color-primary-text">@STRAWBERRY_100</value>
+    <value key="x-appcenter-suggested-price">9</value>
+  </custom>
 </component>
