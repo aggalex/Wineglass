@@ -7,7 +7,18 @@
   <project_license>GPL-3.0+</project_license>
   <name>Wineglass</name>
   <summary>A GUI for Wine</summary>
-  <description>Wineglass is a small application that allows the user to manage his wineprefixes easily and install windows programs without the need of the terminal. It can easily create and remove wineprefixes and install windows apps on their corresponding wineprefix while making them available normally through the applications menu. It also provides an easy way to add windows libraries to wineprefixes through "winetricks".</description>
+  <description>
+  <p>Wineglass is a small application that allows the user to manage his wineprefixes easily and install windows programs without the need of the terminal. It can:</p>
+  <ul>
+    <li>Easily create and remove wineprefixes</li>
+    <li>Install supported windows apps on their corresponding wineprefix</li>
+    <li>Make installed apps available normally through the applications menu.</li>
+    <li>Provide an easy way to add windows libraries to wineprefixes through "winetricks".</li>
+    <li>Configure wine</li>
+    <li>run winprefix-specific system apps</li>
+  </ul>
+  <p>This app is useful for running windows apps and games easily without hustle.</p>
+  </description>
   <releases>
     <release version="0.0.1" date="2018-05-05"/>
   </releases>
