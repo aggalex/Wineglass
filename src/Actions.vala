@@ -46,7 +46,7 @@ namespace Wineglass {
             exe_filter.set_filter_name ("Windows executables");
             exe_filter.add_mime_type ("application/x-dosexec");
             exe_filter.add_mime_type ("application/x-ms-dos-executable");
-            //exe_filter.add_mime_type ("application/x-msi");
+            exe_filter.add_mime_type ("application/x-msi");
 
             file.add_filter (exe_filter);
 
@@ -115,7 +115,12 @@ namespace Wineglass {
 
         public static void exe (string prefix_name, string exe_path) throws RunError {
             try {
-                runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine '" + exe_path + "'");
+                if (exe_path.has_suffix (".msi")) {
+                    runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine msiexec /i '" + exe_path + "'");
+                } else {
+                    runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine '" + exe_path + "'");
+                }
+
             } catch (RunError e) {
                 throw e;
             }
