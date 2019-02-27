@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Alex <{{email}}> -->
 <component type="desktop">
-  <id>com.github.aggalex.Wineglass.desktop</id>
+  <id>com.github.aggalex.wineglass.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_group>Alex Angelou</project_group>
   <project_license>GPL-3.0+</project_license>
@@ -20,14 +20,15 @@
   <p>This app is useful for running windows apps and games easily without hustle.</p>
   </description>
   <releases>
-    <release version="1.1.0" date="2019-0-05"/>
-    <description>
-      <p>changelog:</p>
-      <ul>
-        <li>Added translation support</li>
-        <li>Added .msi support</li>
-      </ul>
-    </description>
+    <release version="1.1.0" date="2019-02-27"/>
+      <description>
+        <p>changelog:</p>
+        <ul>
+          <li>Added translation support</li>
+          <li>Added .msi support</li>
+        </ul>
+      </description>
+    </release>
   </releases>
   <provides>
     <binary>com.github.aggalex.Wineglass</binary>
