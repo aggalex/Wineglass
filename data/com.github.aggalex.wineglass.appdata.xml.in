@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Alex <{{email}}> -->
 <component type="desktop">
-  <id>com.github.aggalex.wineglass.desktop</id>
+  <id>com.github.aggalex.wineglass</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_group>Alex Angelou</project_group>
   <project_license>GPL-3.0+</project_license>
