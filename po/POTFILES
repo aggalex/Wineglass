@@ -1,0 +1,9 @@
+src/widgets/SettingsButton.vala
+src/widgets/NamePopover.vala
+src/widgets/MainBox.vala
+src/widgets/Headerbar.vala
+src/widgets/AppsList.vala
+src/widgets/Application.vala
+src/Actions.vala
+data/com.github.aggalex.wineglass.desktop.in.in
+data/com.github.aggalex.wineglass.appdata.xml.in

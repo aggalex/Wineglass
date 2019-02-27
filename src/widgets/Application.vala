@@ -36,7 +36,7 @@ namespace Wineglass {
         }
 
         protected override void activate () {
-            ErrorToast = new Granite.Widgets.Toast ("Failed");
+            ErrorToast = new Granite.Widgets.Toast ("Failed"); //++++++++++ IT DOESN'T WORK!
             ErrorToast.show ();
             ErrorToast.send_notification ();
 

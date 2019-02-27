@@ -37,9 +37,9 @@ namespace Wineglass {
 
             this.add_named (AppsList, "AppsList");
 
-            var Welcome = new Granite.Widgets.Welcome ("No wineprefixes", "Wineprefix folder is empty");
+            var Welcome = new Granite.Widgets.Welcome (_("No wineprefixes"), _("Wineprefix folder is empty"));
             Welcome.show ();
-            var AddButton = Welcome.append ("list-add", "Create one", "Create a new empty wineprefix");
+            var AddButton = Welcome.append ("list-add", _("Create one"), _("Create a new empty wineprefix"));
 
             var NamePopover = new Wineglass.NamePopover (Welcome.get_button_from_index (AddButton), AppsList);
 

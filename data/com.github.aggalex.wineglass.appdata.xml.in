@@ -3,7 +3,7 @@
 <component type="desktop">
   <id>com.github.aggalex.Wineglass.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_group>Alex</project_group>
+  <project_group>Alex Angelou</project_group>
   <project_license>GPL-3.0+</project_license>
   <name>Wineglass</name>
   <summary>A GUI for Wine</summary>
@@ -20,7 +20,7 @@
   <p>This app is useful for running windows apps and games easily without hustle.</p>
   </description>
   <releases>
-    <release version="0.0.1" date="2018-05-05"/>
+    <release version="1.0.0" date="2018-05-05"/>
   </releases>
   <provides>
     <binary>com.github.aggalex.Wineglass</binary>
@@ -54,7 +54,7 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-  <developer_name>Alex</developer_name> 
+  <developer_name>Alex Angelou</developer_name> 
   <url type="homepage">http://github.com/aggalex/Wineglass/</url>
   <url type="bugtracker">http://github.com/aggalex/Wineglass/issues</url>
   <url type="help">http://github.com/aggalex/Wineglass/issues</url>

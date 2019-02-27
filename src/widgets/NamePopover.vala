@@ -35,7 +35,7 @@ namespace Wineglass {
             NameEntry.set_margin_start (10);
             NameEntry.set_margin_end (10);
 
-            var errorLabel = new Gtk.Label ("You can only use\n latin characters,\n numbers and '_'");
+            var errorLabel = new Gtk.Label (_("You can only use\n latin characters,\n numbers and '_'"));
             errorLabel.set_margin_bottom (10);
             vbox.pack_start (errorLabel, true, true, 0);
             errorLabel.set_no_show_all (true);

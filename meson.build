@@ -101,6 +101,8 @@ valaconfpath = join_paths (meson.build_root(), 'conf.vala').split(meson.source_r
 
 message ('Adds files to build')
 
+subdir('po')
+
 code_files = files(
     #'@0@/@1@'.format(meson.build_root(), valaconf),
     #join_paths (meson.build_root(), 'conf.vala'),
