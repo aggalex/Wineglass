@@ -1,7 +1,7 @@
 # Greek translations for com.github.aggalex.wineglass package.
 # Copyright (C) 2019 THE com.github.aggalex.wineglass'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.aggalex.wineglass package.
-# Automatically generated, 2019.
+# Aggalex, 2019.
 #
 msgid ""
 msgstr ""
@@ -9,37 +9,37 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-27 18:57+0200\n"
 "PO-Revision-Date: 2019-02-27 18:57+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: Aggalex\n"
+"Language-Team: Greek\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/widgets/SettingsButton.vala:32
 msgid "wine configuration"
-msgstr ""
+msgstr "Ρυθμίσεις wine"
 
 #: src/widgets/SettingsButton.vala:33
 msgid "registry editor"
-msgstr ""
+msgstr "Επεξεργαστής Μητρώου"
 
 #: src/widgets/SettingsButton.vala:34
 msgid "winetricks"
-msgstr ""
+msgstr "winetricks"
 
 #: src/widgets/SettingsButton.vala:35
 msgid "command line"
-msgstr ""
+msgstr "Γραμμή Εντολών"
 
 #: src/widgets/SettingsButton.vala:37
 msgid "open prefix directory"
-msgstr ""
+msgstr "Άνοιγμα φακέλου του prefix"
 
 #: src/widgets/SettingsButton.vala:38
 msgid "Run .exe file"
-msgstr ""
+msgstr "Εκτέλεση αρχείου .exe"
 
 #: src/widgets/NamePopover.vala:38
 msgid ""
@@ -47,44 +47,47 @@ msgid ""
 " latin characters,\n"
 " numbers and '_'"
 msgstr ""
+"Μπορείς να χρησιμοποιήσεις\n"
+" μόνο λατινικούς χαρακτήρες,\n"
+" νούμερα και το « _ »"
 
 #: src/widgets/MainBox.vala:40
 msgid "No wineprefixes"
-msgstr ""
+msgstr "Δεν υπάρχουν prefixes"
 
 #: src/widgets/MainBox.vala:40
 msgid "Wineprefix folder is empty"
-msgstr ""
+msgstr "Ο φάκελος των Wineprefix είναι άδειος"
 
 #: src/widgets/MainBox.vala:42
 msgid "Create one"
-msgstr ""
+msgstr "Δημιούργία"
 
 #: src/widgets/MainBox.vala:42
 msgid "Create a new empty wineprefix"
-msgstr ""
+msgstr "Δημιούργησε ένα νέο κενό wineprefix"
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:4
 #: data/com.github.aggalex.wineglass.appdata.xml.in:8
 msgid "Wineglass"
-msgstr ""
+msgstr "Wineglass"
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:5
 #: data/com.github.aggalex.wineglass.appdata.xml.in:9
 msgid "A GUI for Wine"
-msgstr ""
+msgstr "Ένα γραφικό περιβάλλον για το Wine"
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:6
 msgid "Wine Frontent"
-msgstr ""
+msgstr "Γραφικό περιβάλλον Wine"
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:8
 msgid "com.github.aggalex.wineglass"
-msgstr ""
+msgstr "com.github.aggalex.wineglass"
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:11
 msgid "Wine;Windows;run;exe;app;"
-msgstr ""
+msgstr "Wine;Windows;εκτέλεση;exe;εφαρμογή;"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:11
 msgid ""
@@ -92,37 +95,42 @@ msgid ""
 "wineprefixes easily and install windows programs without the need of the "
 "terminal. It can:"
 msgstr ""
+"Το Wineglass είναι μια μικρή εφαρμογή που επιτρέπει στο χρήστη να διαχειρίζεται τα "
+"wineprefixes του εύκολα και να εγκαταστήσει προγράμματα Windows χωρίς την ανάγκη "
+"του τερματικού. Μπορεί:"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:13
 msgid "Easily create and remove wineprefixes"
-msgstr ""
+msgstr "Να δημιουργήσει και να διαγράψει wineprefixes"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:14
 msgid "Install supported windows apps on their corresponding wineprefix"
-msgstr ""
+msgstr "Να εγκαταστήσει εφαρμογές windows στο ανάλογο prefix τους"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:15
 msgid "Make installed apps available normally through the applications menu."
-msgstr ""
+msgstr "Να εμφανίσει τις εγκατεστημένες εφαρμογές στο μενού εφαρμογών"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:16
 msgid ""
 "Provide an easy way to add windows libraries to wineprefixes through "
 "\"winetricks\"."
 msgstr ""
+"Να προσφέρει έναν έυκολο τρόπο πρόσθεσης βιβλιοθηκών windows στα wineprefix μέσω των"
+"«Winetricks»."
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:17
 msgid "Configure wine"
-msgstr ""
+msgstr "Να ρυθμίσει το wine"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:18
 msgid "run winprefix-specific system apps"
-msgstr ""
+msgstr "Να τρέξει εφαρμογές συστήματος του wineprefix"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:20
 msgid ""
 "This app is useful for running windows apps and games easily without hustle."
-msgstr ""
+msgstr "Αυτή η εφαρμογή είναι χρήσιμη για την εύκολη εκτέλεση των εφαρμογών και των παιχνιδιών του Windows"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:25
 msgid "changelog:"
