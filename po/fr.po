@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.aggalex.wineglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-28 16:13+0200\n"
+"POT-Creation-Date: 2019-03-05 12:13+0200\n"
 "PO-Revision-Date: 2019-02-27 19:44+0100\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
@@ -67,6 +67,20 @@ msgstr "En créer un"
 msgid "Create a new empty wineprefix"
 msgstr "Créer un préfixe Wine vide"
 
+#: src/widgets/Headerbar.vala:35
+#, fuzzy
+msgid "Create a new prefix"
+msgstr "Créer un préfixe Wine vide"
+
+#: src/widgets/Headerbar.vala:40
+#, fuzzy
+msgid "Search for wineprefixes"
+msgstr "Pas de préfixes Wine"
+
+#: src/widgets/AppsList.vala:65
+msgid "Remove Prefix"
+msgstr ""
+
 #: data/com.github.aggalex.wineglass.desktop.in.in:4
 #: data/com.github.aggalex.wineglass.appdata.xml.in:8
 msgid "Wineglass"
@@ -90,8 +104,9 @@ msgid "Wine;Windows;run;exe;app;"
 msgstr "Wine;Windows;exécuter;exe;application;"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:11
+#, fuzzy
 msgid ""
-"Wineglass is a small application that allows the user to manage his "
+"Wineglass is a small application that allows the user to manage their "
 "wineprefixes easily and install windows programs without the need of the "
 "terminal. It can:"
 msgstr ""

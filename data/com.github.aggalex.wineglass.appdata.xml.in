@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 Alex <{{email}}> -->
+<!-- Copyright 2018 Alex <ubuntu1aggelalex@gmail.com> -->
 <component type="desktop">
   <id>com.github.aggalex.wineglass</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -22,10 +22,12 @@
   <releases>
     <release version="1.1.2" date="2019-02-27">
       <description>
-        <p>changelog:</p>
+        <p><b>THIS VERSION IS VERY IMPORTANT! IT FIXES A VERY CRITICAL BUG!
+        Please update the app. The bug was that the apps were not installed in the right place. From now on, any new app will be installed to the right place. Like before, any changes to the old app's corresponding winecfg, registry, etc. will have no effect except if you reinstall the app. To uninstall the old apps you'll have to use the terminal or delete the hidden ~/.wine folder.</b><br>changelog:</p>
         <ul>
-          <li>Added translation support</li>
-          <li>Added .msi support</li>
+          <li>Fixed critical bug #40</li>
+          <li>Added searchbar</li>
+          <li>Added tooltips</li>
         </ul>
       </description>
     </release>

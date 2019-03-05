@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.aggalex.wineglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-05 12:07+0200\n"
+"POT-Creation-Date: 2019-03-05 12:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,12 +77,10 @@ msgid "Remove Prefix"
 msgstr ""
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:4
-#: data/com.github.aggalex.wineglass.appdata.xml.in:8
 msgid "Wineglass"
 msgstr ""
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:5
-#: data/com.github.aggalex.wineglass.appdata.xml.in:9
 msgid "A GUI for Wine"
 msgstr ""
 
@@ -96,58 +94,4 @@ msgstr ""
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:11
 msgid "Wine;Windows;run;exe;app;"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:11
-msgid ""
-"Wineglass is a small application that allows the user to manage their "
-"wineprefixes easily and install windows programs without the need of the "
-"terminal. It can:"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:13
-msgid "Easily create and remove wineprefixes"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:14
-msgid "Install supported windows apps on their corresponding wineprefix"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:15
-msgid "Make installed apps available normally through the applications menu."
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:16
-msgid ""
-"Provide an easy way to add windows libraries to wineprefixes through "
-"\"winetricks\"."
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:17
-msgid "Configure wine"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:18
-msgid "run winprefix-specific system apps"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:20
-msgid ""
-"This app is useful for running windows apps and games easily without hustle."
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:25
-msgid "changelog:"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:27
-msgid "Added translation support"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:28
-msgid "Added .msi support"
-msgstr ""
-
-#: data/com.github.aggalex.wineglass.appdata.xml.in:65
-msgid "Alex Angelou"
 msgstr ""
