@@ -37,7 +37,7 @@ namespace Wineglass {
             Search.valign = Gtk.Align.CENTER;
             Search.set_margin_start (10);
             Search.hexpand = true;
-            Search.set_placeholder_text ("Search for wineprefixes");
+            Search.set_placeholder_text (_("Search for wineprefixes"));
 
             Search.changed.connect(() => {
                 ChangedSearch (Search.get_text());
