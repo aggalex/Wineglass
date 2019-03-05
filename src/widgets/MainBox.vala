@@ -27,7 +27,7 @@ namespace Wineglass {
 
         private Wineglass.AppsList AppsList;
 
-        public MainBox () {
+        public MainBox (Wineglass.Headerbar headerbar) {
             this.set_transition_type (Gtk.StackTransitionType.SLIDE_UP_DOWN);
 
             var Wineprefixes = Actions.get_folders (Environment.get_home_dir () + "/.wineprefixes");
@@ -52,18 +52,30 @@ namespace Wineglass {
 
             if (AppsList.get_children_num() == 0) {
                 this.set_visible_child_name ("Welcome");
+                headerbar.reveal_search (false);
             } else {
                 this.set_visible_child_name ("AppsList");
+                headerbar.reveal_search (true);
             }
 
             print (this.get_visible_child_name ());
+
+            headerbar.ChangedSearch.connect ((query) => {
+                AppsList.Search(query);
+            });
+
+            AppsList.NoShow.connect ((has_nothing) => {
+                headerbar.search_error (has_nothing);
+            });
 
             AppsList.empty.connect ((isEmpty) => {
                 print ("Empty/full Signal recieved! " + isEmpty.to_string ());
                 if (isEmpty == true) {
                     this.set_visible_child_name ("Welcome");
+                    headerbar.reveal_search (false);
                 } else {
                     this.set_visible_child_name ("AppsList");
+                    headerbar.reveal_search (true);
                 }
             });
         }

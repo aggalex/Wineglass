@@ -66,6 +66,7 @@
   <url type="homepage">http://github.com/aggalex/Wineglass/</url>
   <url type="bugtracker">http://github.com/aggalex/Wineglass/issues</url>
   <url type="help">http://github.com/aggalex/Wineglass/issues</url>
+  <url type="translate">https://github.com/aggalex/Wineglass/tree/master/po</url>
   <update_contact>ubuntu1aggelalex_AT_gmail.com</update_contact>
   <screenshots>
     <screenshot type="default">

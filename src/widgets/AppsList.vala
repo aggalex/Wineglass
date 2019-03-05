@@ -26,8 +26,10 @@ namespace Wineglass {
 
     public class AppsList : Gtk.ListBox {
 
+        public signal void NoShow (bool has_nothing);
         public signal void empty (bool is_empty);
         private int children_number = 0;
+        private int children_shown = 0;
 
         public AppsList (string[] folders) {
             foreach (string folder in folders) {
@@ -53,12 +55,14 @@ namespace Wineglass {
             row.add (hbox);
 
             row.set_name (AppName + "_row");
+            //row.no_show_all();
 
             var label = new Gtk.Label (AppName);
             hbox.pack_start (label, false, false, 10);
 
             var trashButton = new Gtk.Button.from_icon_name ("user-trash-symbolic", Gtk.IconSize.MENU);
             trashButton.clicked.connect (RemoveEntry);
+            trashButton.set_tooltip_text (_("Remove Prefix"));
             trashButton.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             hbox.pack_end (trashButton, false, false, 10);
 
@@ -69,11 +73,12 @@ namespace Wineglass {
             children_number++;
 
             this.add (row);
-            this.show_all();
+            this.show_all ();
+            row.show();
         }
 
         public string getSelectedPrefix () {
-            return (this.get_selected_row ().get_name ().replace ("_row", "") + "\n");
+            return (this.get_selected_row ().get_name ().replace ("_row", ""));
         }
 
         private void RemoveEntry (Gtk.Button sender) {
@@ -90,5 +95,20 @@ namespace Wineglass {
             }
         }
 
+        public void Search (string query) {
+            children_shown = children_number;
+            for (int i=0; i<children_number; i++) {
+                this.get_row_at_index(i).show();
+                if (! this.get_row_at_index(i).get_name ().replace ("_row", "").contains (query)) {
+                    this.get_row_at_index(i).hide ();
+                    children_shown--;
+                }
+            }
+            if (children_shown == 0) {
+                NoShow (true);
+            } else {
+                NoShow (false);
+            }
+        }
     }
 }

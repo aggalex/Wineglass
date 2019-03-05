@@ -45,7 +45,7 @@ namespace Wineglass {
             var headerbar = new Wineglass.Headerbar ();
             window.set_titlebar (headerbar);
 
-            var MainBox = new Wineglass.MainBox ();
+            var MainBox = new Wineglass.MainBox (headerbar);
 
             var NamePopover = new Wineglass.NamePopover (headerbar.addEntryButton, MainBox.get_AppsList ());
 

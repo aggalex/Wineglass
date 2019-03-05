@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.aggalex.wineglass\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-27 18:57+0200\n"
+"POT-Creation-Date: 2019-02-28 16:10+0200\n"
 "PO-Revision-Date: 2019-02-27 18:57+0200\n"
 "Last-Translator: Aggalex\n"
 "Language-Team: Greek\n"
@@ -95,9 +95,9 @@ msgid ""
 "wineprefixes easily and install windows programs without the need of the "
 "terminal. It can:"
 msgstr ""
-"Το Wineglass είναι μια μικρή εφαρμογή που επιτρέπει στο χρήστη να διαχειρίζεται τα "
-"wineprefixes του εύκολα και να εγκαταστήσει προγράμματα Windows χωρίς την ανάγκη "
-"του τερματικού. Μπορεί:"
+"Το Wineglass είναι μια μικρή εφαρμογή που επιτρέπει στο χρήστη να "
+"διαχειρίζεται τα wineprefixes του εύκολα και να εγκαταστήσει προγράμματα "
+"Windows χωρίς την ανάγκη του τερματικού. Μπορεί:"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:13
 msgid "Easily create and remove wineprefixes"
@@ -116,8 +116,8 @@ msgid ""
 "Provide an easy way to add windows libraries to wineprefixes through "
 "\"winetricks\"."
 msgstr ""
-"Να προσφέρει έναν έυκολο τρόπο πρόσθεσης βιβλιοθηκών windows στα wineprefix μέσω των"
-"«Winetricks»."
+"Να προσφέρει έναν έυκολο τρόπο πρόσθεσης βιβλιοθηκών windows στα wineprefix "
+"μέσω των«Winetricks»."
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:17
 msgid "Configure wine"
@@ -130,7 +130,9 @@ msgstr "Να τρέξει εφαρμογές συστήματος του winepre
 #: data/com.github.aggalex.wineglass.appdata.xml.in:20
 msgid ""
 "This app is useful for running windows apps and games easily without hustle."
-msgstr "Αυτή η εφαρμογή είναι χρήσιμη για την εύκολη εκτέλεση των εφαρμογών και των παιχνιδιών του Windows"
+msgstr ""
+"Αυτή η εφαρμογή είναι χρήσιμη για την εύκολη εκτέλεση των εφαρμογών και των "
+"παιχνιδιών του Windows"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:25
 msgid "changelog:"
@@ -146,4 +148,4 @@ msgstr ""
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:65
 msgid "Alex Angelou"
-msgstr ""
+msgstr "Αλέξανδρος Αγγέλου"

@@ -117,6 +117,7 @@ namespace Wineglass {
             try {
                 if (exe_path.has_suffix (".msi")) {
                     runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine msiexec /i '" + exe_path + "'");
+                    stdout.printf ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine msiexec /i '" + exe_path + "'\n");
                 } else {
                     runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine '" + exe_path + "'");
                 }
