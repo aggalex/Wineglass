@@ -70,12 +70,12 @@ msgstr "Créer un préfixe Wine vide"
 #: src/widgets/Headerbar.vala:35
 #, fuzzy
 msgid "Create a new prefix"
-msgstr "Créer un préfixe Wine vide"
+msgstr "Créer un nouveau préfixe Wine"
 
 #: src/widgets/Headerbar.vala:40
 #, fuzzy
 msgid "Search for wineprefixes"
-msgstr "Pas de préfixes Wine"
+msgstr "Rechercher des préfixes Wine"
 
 #: src/widgets/AppsList.vala:65
 msgid "Remove Prefix"
