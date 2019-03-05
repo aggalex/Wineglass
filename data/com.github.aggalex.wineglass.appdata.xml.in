@@ -22,8 +22,9 @@
   <releases>
     <release version="1.1.2" date="2019-02-27">
       <description>
-        <p><b>THIS VERSION IS VERY IMPORTANT! IT FIXES A VERY CRITICAL BUG!
-        Please update the app. The bug was that the apps were not installed in the right place. From now on, any new app will be installed to the right place. Like before, any changes to the old app's corresponding winecfg, registry, etc. will have no effect except if you reinstall the app. To uninstall the old apps you'll have to use the terminal or delete the hidden ~/.wine folder.</b><br>changelog:</p>
+        <p>THIS VERSION IS VERY IMPORTANT! IT FIXES A VERY CRITICAL BUG!
+        Please update the app. The bug was that the apps were not installed in the right place. From now on, any new app will be installed to the right place. Like before, any changes to the old app's corresponding winecfg, registry, etc. will have no effect except if you reinstall the app. To uninstall the old apps you'll have to use the terminal or delete the hidden ~/.wine folder.
+        changelog:</p>
         <ul>
           <li>Fixed critical bug #40</li>
           <li>Added searchbar</li>
