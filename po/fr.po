@@ -79,7 +79,7 @@ msgstr "Pas de préfixes Wine"
 
 #: src/widgets/AppsList.vala:65
 msgid "Remove Prefix"
-msgstr ""
+msgstr "Supprimer le préfixe"
 
 #: data/com.github.aggalex.wineglass.desktop.in.in:4
 #: data/com.github.aggalex.wineglass.appdata.xml.in:8
@@ -116,7 +116,7 @@ msgstr ""
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:13
 msgid "Easily create and remove wineprefixes"
-msgstr "Facilement ajouter ou supprimer des préfixes Wine"
+msgstr "Ajouter ou supprimer facilement des préfixes Wine"
 
 #: data/com.github.aggalex.wineglass.appdata.xml.in:14
 msgid "Install supported windows apps on their corresponding wineprefix"
