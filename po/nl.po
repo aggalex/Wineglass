@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.aggalex.wineglass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.aggalex.wineglass\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-05 12:23+0200\n"
+"PO-Revision-Date: 2019-03-31 17:31+0200\n"
+"Language-Team: Dutch <vistausss@outlook.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl_NL\n"
+
+#: src/widgets/SettingsButton.vala:32
+msgid "wine configuration"
+msgstr "wine-configuratie"
+
+#: src/widgets/SettingsButton.vala:33
+msgid "registry editor"
+msgstr "registerbewerker"
+
+#: src/widgets/SettingsButton.vala:34
+msgid "winetricks"
+msgstr "winetricks"
+
+#: src/widgets/SettingsButton.vala:35
+msgid "command line"
+msgstr "opdrachtregel"
+
+#: src/widgets/SettingsButton.vala:37
+msgid "open prefix directory"
+msgstr "wine-profielmap openen"
+
+#: src/widgets/SettingsButton.vala:38
+msgid "Run .exe file"
+msgstr ".exe-bestand uitvoeren"
+
+#: src/widgets/NamePopover.vala:38
+msgid ""
+"You can only use\n"
+" latin characters,\n"
+" numbers and '_'"
+msgstr ""
+"Je mag alleen\n"
+" Latijnse tekens, getallen\n"
+" en '_' gebruiken"
+
+#: src/widgets/MainBox.vala:40
+msgid "No wineprefixes"
+msgstr "Geen Wine-profielen"
+
+#: src/widgets/MainBox.vala:40
+msgid "Wineprefix folder is empty"
+msgstr "De Wine-profielmap is leeg"
+
+#: src/widgets/MainBox.vala:42
+msgid "Create one"
+msgstr "Creëren"
+
+#: src/widgets/MainBox.vala:42
+msgid "Create a new empty wineprefix"
+msgstr "Creëer een nieuw, blanco Wine-profiel"
+
+#: src/widgets/Headerbar.vala:35
+msgid "Create a new prefix"
+msgstr "Nieuw profiel creëren"
+
+#: src/widgets/Headerbar.vala:40
+msgid "Search for wineprefixes"
+msgstr "Zoeken naar Wine-profielen"
+
+#: src/widgets/AppsList.vala:65
+msgid "Remove Prefix"
+msgstr "Profiel verwijderen"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:4
+msgid "Wineglass"
+msgstr "Wineglass"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:5
+msgid "A GUI for Wine"
+msgstr "Een toepassing voor het beheren van Wine"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:6
+msgid "Wine Frontent"
+msgstr "Wine-frontend"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:8
+msgid "com.github.aggalex.wineglass"
+msgstr "com.github.aggalex.wineglass"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:11
+msgid "Wine;Windows;run;exe;app;"
+msgstr "Wine;Windows;uitvoeren;exe;app;"
