@@ -36,7 +36,7 @@ namespace Wineglass {
         }
 
         protected override void activate () {
-            ErrorToast = new Granite.Widgets.Toast ("Failed"); //++++++++++ IT DOESN'T WORK!
+            ErrorToast = new Granite.Widgets.Toast ("Failed"); // TODO ++++++++++ IT DOESN'T WORK!
             ErrorToast.show ();
             ErrorToast.send_notification ();
 
@@ -47,7 +47,15 @@ namespace Wineglass {
 
             var MainBox = new Wineglass.MainBox (headerbar);
 
-            var NamePopover = new Wineglass.NamePopover (headerbar.addEntryButton, MainBox.get_AppsList ());
+            var overlay = new DndOverlay (MainBox);
+            window.key_press_event.connect ((key) => {
+                if (Gdk.keyval_name (key.keyval) == "Escape") {
+                    overlay.on_esc ();
+                }
+                return true;
+            });
+
+            var NamePopover = new Wineglass.NamePopover (headerbar.addEntryButton, MainBox.AppsList);
 
             new Wineglass.Css ();
             //var SettingsMenu = new Wineglass.SettingsMenu ();
@@ -56,11 +64,11 @@ namespace Wineglass {
                 NamePopover.showup ();
             });
 
-            connect_to_actions (MainBox.get_AppsList ());
+            connect_to_actions (MainBox.AppsList);
 
             window.title = "Wineglass";
             window.set_default_size (400, 400);
-            window.add (MainBox);
+            window.add (overlay);
             window.show_all ();
         }
 
@@ -69,7 +77,6 @@ namespace Wineglass {
             winecfg.activate.connect (() => {
                 try {
                     Actions.winecfg (AppsList.getSelectedPrefix ());
-                    print ("ran winecfg\n");
                 } catch (RunError e) {
                     ErrorToast.title = "failed to run wine configurations";
                     ErrorToast.send_notification ();
@@ -83,7 +90,6 @@ namespace Wineglass {
             regedit.activate.connect (() => {
                 try {
                     Actions.regedit (AppsList.getSelectedPrefix ());
-                    print ("ran regedit\n");
                 } catch (RunError e) {
                     ErrorToast.title = "failed to run the registry editor";
                     ErrorToast.send_notification ();
@@ -97,7 +103,6 @@ namespace Wineglass {
             winetricks.activate.connect (() => {
                 try {
                     Actions.winetricks (AppsList.getSelectedPrefix ());
-                    print ("ran winetricks\n");
                 } catch (RunError e) {
                     ErrorToast.title = "failed to run winetricks";
                     ErrorToast.send_notification ();
@@ -111,7 +116,6 @@ namespace Wineglass {
             cmd.activate.connect (() => {
                 try {
                     Actions.cmd (AppsList.getSelectedPrefix ());
-                    print ("ran cmd\n");
                 } catch (RunError e) {
                     ErrorToast.title = "failed to run command line";
                     ErrorToast.send_notification ();
@@ -124,7 +128,6 @@ namespace Wineglass {
             //var shortcuts = new SimpleAction ("shortcuts", null);
             //shortcuts.activate.connect (() => {
             //    //run shortcuts on wineprefix
-            //    print ("ran shortcuts\n");
             //});
             //shortcuts.set_enabled (true);
             //this.add_action (shortcuts);
@@ -133,7 +136,6 @@ namespace Wineglass {
             c_dir.activate.connect (() => {
                 try {
                     Actions.open_C (AppsList.getSelectedPrefix ());
-                    print ("ran c_dir\n");
                 } catch (RunError e) {
                     ErrorToast.title = "failed to open the prefix directory";
                     ErrorToast.send_notification ();
@@ -149,11 +151,9 @@ namespace Wineglass {
                     try {
                         string f = Actions.ChooseFile ();
                         Actions.exe (AppsList.getSelectedPrefix (), f);
-                        print ("ran exe\n");
                     } catch (FileChooserError e) {
                         ErrorToast.title = e.message;
                         ErrorToast.send_notification ();
-                        print ("You canceled File Choosing\n");
                     }
                 } catch (RunError e) {
                     ErrorToast.title = "failed to run executable";

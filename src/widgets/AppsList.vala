@@ -42,7 +42,6 @@ namespace Wineglass {
         }
 
         public int get_children_num () {
-            print (children_number.to_string());
             return children_number;
         }
 
@@ -91,7 +90,6 @@ namespace Wineglass {
                 }
             } catch (RunError e) {
                 //Do something here somehow
-                print ("error removing prefix: " + e.message);
             }
         }
 

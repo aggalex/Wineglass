@@ -25,7 +25,7 @@ using Gtk;
 namespace Wineglass {
     public class MainBox : Gtk.Stack {
 
-        private Wineglass.AppsList AppsList;
+        public Wineglass.AppsList AppsList {get; private set;}
 
         public MainBox (Wineglass.Headerbar headerbar) {
             this.set_transition_type (Gtk.StackTransitionType.SLIDE_UP_DOWN);
@@ -37,18 +37,18 @@ namespace Wineglass {
 
             this.add_named (AppsList, "AppsList");
 
-            var Welcome = new Granite.Widgets.Welcome (_("No wineprefixes"), _("Wineprefix folder is empty"));
-            Welcome.show ();
-            var AddButton = Welcome.append ("list-add", _("Create one"), _("Create a new empty wineprefix"));
+            var welcome = new Granite.Widgets.Welcome (_("No wineprefixes"), _("Wineprefix folder is empty"));
+            welcome.show ();
 
-            var NamePopover = new Wineglass.NamePopover (Welcome.get_button_from_index (AddButton), AppsList);
+            var AddButton = welcome.append ("list-add", _("Create one"), _("Create a new empty wineprefix"));
 
-            Welcome.activated.connect (() => {
+            var NamePopover = new Wineglass.NamePopover (welcome.get_button_from_index (AddButton), AppsList);
+
+            welcome.activated.connect (() => {
                 NamePopover.showup ();
             });
-            this.add_named (Welcome, "Welcome");
 
-            print (this.get_visible_child_name ());
+            this.add_named (welcome, "Welcome");
 
             if (AppsList.get_children_num() == 0) {
                 this.set_visible_child_name ("Welcome");
@@ -57,8 +57,6 @@ namespace Wineglass {
                 this.set_visible_child_name ("AppsList");
                 headerbar.reveal_search (true);
             }
-
-            print (this.get_visible_child_name ());
 
             headerbar.ChangedSearch.connect ((query) => {
                 AppsList.Search(query);
@@ -69,7 +67,6 @@ namespace Wineglass {
             });
 
             AppsList.empty.connect ((isEmpty) => {
-                print ("Empty/full Signal recieved! " + isEmpty.to_string ());
                 if (isEmpty == true) {
                     this.set_visible_child_name ("Welcome");
                     headerbar.reveal_search (false);
@@ -78,10 +75,6 @@ namespace Wineglass {
                     headerbar.reveal_search (true);
                 }
             });
-        }
-
-        public Wineglass.AppsList get_AppsList () {
-            return AppsList;
         }
 
     }

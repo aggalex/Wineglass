@@ -1,3 +1,7 @@
 @define-color colorAccent #ff2a2a;
 @define-color colorPrimary #d40000;
 @define-color textColorPrimary #fff;
+
+.dark-bg {
+    background-color: rgba(0, 0, 0, 0.3); 
+}

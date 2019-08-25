@@ -54,14 +54,12 @@ namespace Wineglass {
                         } catch (RunError e) {
                             Application.ErrorToast.title = "failed to create new wineprefix called " + NameEntry.get_text ();
                             Application.ErrorToast.send_notification ();
-                            print (e.message);
                         }
                     } else {
                         errorLabel.show ();
                     }
                 } catch (RegexError e) {
                     this.popdown ();
-                    print ("Regex testing error: " + e.message);
                 }
             });
 

@@ -129,10 +129,10 @@ namespace Wineglass {
 
         public static void create_prefix (string name) throws RunError {
             //create a wine prefix here
-            print ("name\n");
             var home = GLib.Environment.get_home_dir ();
             var prefixdir = home + "/.wineprefixes/" + name;
-            run.begin("mkdir \"" + prefixdir + "\" && WINEPREFIX=\"" + prefixdir + "\" wine wineboot ",
+            var command = "mkdir \"" + prefixdir + "\" && WINEPREFIX=\"" + prefixdir + "\" wine wineboot ";
+            run.begin(command,
             (obj, res) => {
                 int status = run.end (res);
                 if (status != 0) {
@@ -158,7 +158,6 @@ namespace Wineglass {
         }
 
         public static void remove_prefix (string name) throws RunError {
-            print ("name: " + name + "\n");
             string directory = GLib.Environment.get_home_dir () + "/.wineprefixes/" + name;
             run.begin ("rm -rf " + directory + "", (obj, res) => {
                 int status = run.end (res);
@@ -166,10 +165,8 @@ namespace Wineglass {
                     throw new RunError.PREFIX_DELETION_FAILED ("Failed to delete prefix folder: rm return non-zero exit code " + (string) status);
                 }
             });
-            
-            //THIS DOES NOT WORK the folder needs to be empty
         }
-        
+
         public static string[] get_folders (string directory) {
             try {
                 var i = 0;
@@ -183,11 +180,11 @@ namespace Wineglass {
         			}
 
                 }
-                
+
                 dir.rewind ();
                 var names = new string[i];
                 i = 0;
-                
+
         		while ((name = dir.read_name ()) != null) {
         			string path = Path.build_filename (directory, name);
         			if (FileUtils.test (path, FileTest.IS_DIR)) {
@@ -195,7 +192,7 @@ namespace Wineglass {
         			}
 
                 }
-                
+
                 return names;
             } catch (FileError e) {
                 if (! FileUtils.test (directory, FileTest.IS_DIR)) {
@@ -204,12 +201,48 @@ namespace Wineglass {
                         file.make_directory ();
                         return {};
                     } catch (Error e) {
-                        print ("error: " + e.message);
                         return {};
                     }
                 }
-                print (e.message);
                 return {};
+            }
+        }
+
+        public static string create_prefix_from_exe (string exe_path) throws RunError {
+            if (!(exe_path.has_suffix (".exe")) && !(exe_path.has_suffix (".msi")))
+                return "";
+
+            var name_arr = exe_path.split ("/");
+            var name = name_arr [name_arr.length-1];
+            name = name [0: name.length-4];
+            name = make_name_legal (name.replace("%20", " ").replace("file://", ""));
+            if (name.has_suffix ("_"))
+                name = name [0:name.length-1];
+
+            var home = GLib.Environment.get_home_dir ();
+            var prefixdir = home + "/.wineprefixes/" + name;
+            var command = "mkdir \"" + prefixdir + "\"";
+            run.begin(command,
+            (obj, res) => {
+                int status = run.end (res);
+                if (status != 0) {
+                    throw new RunError.PREFIX_CREATION_FAILED ("Wineprefix creation failed with error code: " + status.to_string ());
+                }
+                exe (name, exe_path);
+            });
+
+            return name;
+        }
+
+        private static string make_name_legal (string name) {
+            try {
+                var regex = new Regex ("[^A-za-z_]");
+                var underscore_regex = new Regex ("[ \\-\\.]");
+                name = underscore_regex.replace (name, name.length, 0, "_");
+                return regex.replace (name, name.length, 0, "");
+            } catch (RegexError e) {
+                error (e.message);
+                assert_not_reached ();
             }
         }
 

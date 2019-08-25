@@ -52,6 +52,11 @@ install_data(
     install_dir: join_paths(get_option('datadir'), 'wineglass')
 )
 
+install_data(
+    'data/Images/dnd_image.svg',
+    install_dir: join_paths(get_option('datadir'), 'wineglass')
+)
+
 config_data = configuration_data()
 config_data.set('EXEC_NAME', meson.project_name())
 
@@ -110,6 +115,7 @@ code_files = files(
     'src/widgets/AppsList.vala',
     'src/widgets/Headerbar.vala',
     'src/widgets/MainBox.vala',
+    'src/widgets/DndOverlay.vala',
     'src/widgets/NamePopover.vala',
     'src/widgets/SettingsButton.vala',
     'src/widgets/Application.vala',
