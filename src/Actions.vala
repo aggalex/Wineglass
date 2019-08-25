@@ -74,43 +74,23 @@ namespace Wineglass {
         }
 
         public static void winecfg (string prefix_name) throws RunError {
-            try {
-                runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine winecfg");
-            } catch (RunError e) {
-                throw e;
-            }
+            runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine winecfg");
         }
 
         public static void regedit (string prefix_name) throws RunError {
-            try {
-                runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine regedit");
-            } catch (RunError e) {
-                throw e;
-            }
+            runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine regedit");
         }
 
         public static void winetricks (string prefix_name) throws RunError {
-            try {
-                runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " winetricks");
-            } catch (RunError e) {
-                throw e;
-            }
+            runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " winetricks");
         }
 
         public static void cmd (string prefix_name) throws RunError {
-            try {
-                runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine start cmd.exe");
-            } catch (RunError e) {
-                throw e;
-            }
+            runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine start cmd.exe");
         }
 
         public static void open_C (string prefix_name) throws RunError {
-            try {
-                runAction ("xdg-open " + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + "");
-            } catch (RunError e) {
-                throw e;
-            }
+            runAction ("xdg-open " + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + "");
         }
 
         public static void exe (string prefix_name, string exe_path) throws RunError {
@@ -242,7 +222,6 @@ namespace Wineglass {
                 return regex.replace (name, name.length, 0, "");
             } catch (RegexError e) {
                 error (e.message);
-                assert_not_reached ();
             }
         }
 

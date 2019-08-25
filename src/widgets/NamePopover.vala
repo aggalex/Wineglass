@@ -42,30 +42,47 @@ namespace Wineglass {
             errorLabel.hide ();
             this.add (vbox);
 
-            NameEntry.activate.connect (() => {
-                try {
-                    var regex = new Regex ("^[A-Za-z1-9_]+$");
-                    if (regex.match (NameEntry.get_text ())) {
-                        this.popdown ();
-                        errorLabel.hide ();
-                        try {
-                            Actions.create_prefix (NameEntry.get_text ());
-                            AppsList.NewEntry (NameEntry.get_text ());
-                        } catch (RunError e) {
-                            Application.ErrorToast.title = "failed to create new wineprefix called " + NameEntry.get_text ();
-                            Application.ErrorToast.send_notification ();
+            Regex? regex = null;
+            Regex? bad_char_regex = null;
+            try {
+                regex = new Regex ("^[A-Za-z1-9_]+$");
+                bad_char_regex = new Regex ("[^A-Za-z1-9_]");
+            } catch (RegexError e) {
+                assert_not_reached ();
+            }
+
+            NameEntry.insert_text.connect ((new_text, new_text_length) => {
+                errorLabel.hide ();
+                if (regex != null) {
+                    try {
+                        var legal_text = bad_char_regex.replace (new_text, new_text_length, 0, "");
+                        if (new_text != legal_text) {
+                            errorLabel.show ();
+                            Signal.stop_emission ((void*) NameEntry, Signal.lookup ("insert-text", typeof (Entry)), 0);
                         }
-                    } else {
-                        errorLabel.show ();
+                    } catch (RegexError e) {
+                        assert_not_reached ();
                     }
-                } catch (RegexError e) {
+                }
+            });
+
+            NameEntry.activate.connect (() => {
+                if (regex.match (NameEntry.get_text ())) {
                     this.popdown ();
+                    errorLabel.hide ();
+                    try {
+                        Actions.create_prefix (NameEntry.get_text ());
+                        AppsList.NewEntry (NameEntry.get_text ());
+                    } catch (RunError e) {
+                        Application.ErrorToast.title = "failed to create new wineprefix called " + NameEntry.get_text ();
+                        Application.ErrorToast.send_notification ();
+                    }
                 }
             });
 
             this.set_relative_to (Relative);
         }
-        
+
         public void showup () {
             this.popup();
             this.show_all();

@@ -85,9 +85,13 @@ namespace Wineglass {
         public void on_drag_data_received (Gdk.DragContext drag_context, int x, int y, Gtk.SelectionData data, uint info, uint time) {
             foreach (string uri in data.get_uris ()) {
                 uri = uri.replace("%20", " ").replace("file://", "");
-                var name = Actions.create_prefix_from_exe (uri);
-                if (name != "" && background is MainBox)
-                    ((MainBox) background).AppsList.NewEntry (name);
+                try {
+                    var name = Actions.create_prefix_from_exe (uri);
+                    if (name != "" && background is MainBox)
+                        ((MainBox) background).AppsList.NewEntry (name);
+                } catch (RunError e) {
+                    error (e.message);
+                }
             }
             Gtk.drag_finish (drag_context, true, false, time);
         }
