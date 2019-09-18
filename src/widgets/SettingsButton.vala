@@ -29,12 +29,12 @@ namespace Wineglass {
         public SettingsButton (Gtk.ListBoxRow row, Gtk.ListBox list) {
             this.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
-            menu.insert (1, _("wine configuration"), "app.winecfg");
-            menu.insert (2, _("registry editor"), "app.regedit");
-            menu.insert (3, _("winetricks"), "app.winetricks");
-            menu.insert (4, _("command line"), "app.cmd");
-            //menu.insert (5, "shortcuts", "app.shortcuts");
-            menu.insert (6, _("open prefix directory"), "app.c_dir");
+            menu.insert (1, _("Wine configuration"), "app.winecfg");
+            menu.insert (2, _("Registry editor"), "app.regedit");
+            menu.insert (3, _("Winetricks"), "app.winetricks");
+            menu.insert (4, _("Command line"), "app.cmd");
+            menu.insert (5, _("Task Manager"), "app.taskmgr");
+            menu.insert (6, _("Open prefix directory"), "app.c_dir");
             menu.insert (7, _("Run .exe file"), "app.exe");
 
             this.set_menu_model (menu);

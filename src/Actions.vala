@@ -89,6 +89,10 @@ namespace Wineglass {
             runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine start cmd.exe");
         }
 
+        public static void taskmgr (string prefix_name) throws RunError {
+            runAction ("WINEPREFIX=" + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + " wine taskmgr");
+        }
+
         public static void open_C (string prefix_name) throws RunError {
             runAction ("xdg-open " + GLib.Environment.get_home_dir () + "/.wineprefixes/" + prefix_name + "");
         }

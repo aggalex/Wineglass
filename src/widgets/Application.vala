@@ -125,12 +125,18 @@ namespace Wineglass {
             cmd.set_enabled (true);
             this.add_action (cmd);
 
-            //var shortcuts = new SimpleAction ("shortcuts", null);
-            //shortcuts.activate.connect (() => {
-            //    //run shortcuts on wineprefix
-            //});
-            //shortcuts.set_enabled (true);
-            //this.add_action (shortcuts);
+            var taskmgr = new SimpleAction ("taskmgr", null);
+            taskmgr.activate.connect (() => {
+                try {
+                    Actions.taskmgr (AppsList.getSelectedPrefix ());
+                } catch (RunError e) {
+                    ErrorToast.title = "failed to run the wine taskmanager";
+                    ErrorToast.send_notification ();
+                    warning ("failed to open prefix directory: " + e.message);
+                }
+            });
+            taskmgr.set_enabled (true);
+            this.add_action (taskmgr);
 
             var c_dir = new SimpleAction ("c_dir", null);
             c_dir.activate.connect (() => {

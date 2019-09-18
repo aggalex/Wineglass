@@ -35,11 +35,11 @@ namespace Wineglass {
             NameEntry.set_margin_start (10);
             NameEntry.set_margin_end (10);
 
-            var errorLabel = new Gtk.Label (_("You can only use\n latin characters,\n numbers and '_'"));
-            errorLabel.set_margin_bottom (10);
-            vbox.pack_start (errorLabel, true, true, 0);
-            errorLabel.set_no_show_all (true);
-            errorLabel.hide ();
+            // var errorLabel = new Gtk.Label (_("Only latin characters, numbers and the underscore"));
+            // errorLabel.set_margin_bottom (10);
+            // vbox.pack_start (errorLabel, true, true, 0);
+            // errorLabel.set_no_show_all (true);
+            // errorLabel.hide ();
             this.add (vbox);
 
             Regex? regex = null;
@@ -52,12 +52,12 @@ namespace Wineglass {
             }
 
             NameEntry.insert_text.connect ((new_text, new_text_length) => {
-                errorLabel.hide ();
+                // errorLabel.hide ();
                 if (regex != null) {
                     try {
                         var legal_text = bad_char_regex.replace (new_text, new_text_length, 0, "");
                         if (new_text != legal_text) {
-                            errorLabel.show ();
+                            // errorLabel.show ();
                             Signal.stop_emission ((void*) NameEntry, Signal.lookup ("insert-text", typeof (Entry)), 0);
                         }
                     } catch (RegexError e) {
@@ -69,7 +69,7 @@ namespace Wineglass {
             NameEntry.activate.connect (() => {
                 if (regex.match (NameEntry.get_text ())) {
                     this.popdown ();
-                    errorLabel.hide ();
+                    // errorLabel.hide ();
                     try {
                         Actions.create_prefix (NameEntry.get_text ());
                         AppsList.NewEntry (NameEntry.get_text ());
