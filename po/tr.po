@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.aggalex.wineglass package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.aggalex.wineglass\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-05 12:23+0200\n"
+"PO-Revision-Date: 2022-05-31 18:18 +3\n"
+"Last-Translator: Ahmet Efe Eren ahmetefeeren57@gmail.com\n"
+"Language-Team: Ahmet Efe Eren\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/widgets/SettingsButton.vala:32
+msgid "wine configuration"
+msgstr "wine konfigürasyon"
+
+#: src/widgets/SettingsButton.vala:33
+msgid "registry editor"
+msgstr "kayıt düzenleyici"
+
+#: src/widgets/SettingsButton.vala:34
+msgid "winetricks"
+msgstr "winetricks"
+
+#: src/widgets/SettingsButton.vala:35
+msgid "command line"
+msgstr "komut satırı"
+yılaa
+#: src/widgets/SettingsButton.vala:37
+msgid "open prefix directory"
+msgstr "prefix dizinini aç"
+
+#: src/widgets/SettingsButton.vala:38
+msgid "Run .exe file"
+msgstr ".exe dosyası çalıştır"
+
+#: src/widgets/NamePopover.vala:38
+msgid ""
+"You can only use\n"
+" latin characters,\n"
+" numbers and '_'"
+msgstr ""
+"Sadece\n"
+" latitin karakterler ,\n"
+" sayılar ve '_' kullanabilirsin "
+
+#: src/widgets/MainBox.vala:40
+msgid "No wineprefixes"
+msgstr "Wineprefix'ler yok"
+
+#: src/widgets/MainBox.vala:40
+msgid "Wineprefix folder is empty"
+msgstr "Wineprefix klasörü boş"
+
+#: src/widgets/MainBox.vala:42
+msgid "Create one"
+msgstr "Bir tane oluştur"
+
+#: src/widgets/MainBox.vala:42
+msgid "Create a new empty wineprefix"
+msgstr "Yeni bir boş wineprefix oluştur"
+
+#: src/widgets/Headerbar.vala:35
+msgid "Create a new prefix"
+msgstr "Yeni bir prefix oluştur"
+
+#: src/widgets/Headerbar.vala:40
+msgid "Search for wineprefixes"
+msgstr "Wineprefix'ler için ara "
+
+#: src/widgets/AppsList.vala:65
+msgid "Remove Prefix"
+msgstr "Prefix'i sil"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:4
+msgid "Wineglass"
+msgstr "Wineglass"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:5
+msgid "A GUI for Wine"
+msgstr "Wine için bir arayüz"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:6
+msgid "Wine Frontent"
+msgstr "Wine Frontent"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:8
+msgid "com.github.aggalex.wineglass"
+msgstr "com.github.aggalex.wineglass"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:11
+msgid "Wine;Windows;run;exe;app;"
+msgstr "Wine;Windows;run;exe;app;"
