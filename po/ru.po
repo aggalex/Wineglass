@@ -1,0 +1,159 @@
+# German translations for com.github.aggalex.wineglass package.
+# Copyright (C) 2019 THE com.github.aggalex.wineglass'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.aggalex.wineglass package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.aggalex.wineglass\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-05 12:13+0200\n"
+"PO-Revision-Date: 2019-02-27 18:57+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/widgets/SettingsButton.vala:32
+msgid "wine configuration"
+msgstr "Конфигурация Wine"
+
+#: src/widgets/SettingsButton.vala:33
+msgid "registry editor"
+msgstr "Редактор реестра"
+
+#: src/widgets/SettingsButton.vala:34
+msgid "winetricks"
+msgstr "Winetricks"
+
+#: src/widgets/SettingsButton.vala:35
+msgid "command line"
+msgstr "Командная строка"
+
+#: src/widgets/SettingsButton.vala:37
+msgid "open prefix directory"
+msgstr "Открыть директорию Prefix"
+
+#: src/widgets/SettingsButton.vala:38
+msgid "Run .exe file"
+msgstr "Запустить файл .exe"
+
+#: src/widgets/NamePopover.vala:38
+msgid ""
+"You can only use\n"
+" latin characters,\n"
+" numbers and '_'"
+msgstr ""
+"Вы можете использовать\n"
+" только латиницу\n"
+" числа и '_'
+
+#: src/widgets/MainBox.vala:40
+msgid "No wineprefixes"
+msgstr "Нет Wineprefixes"
+
+#: src/widgets/MainBox.vala:40
+msgid "Wineprefix folder is empty"
+msgstr "Папка Wineprefix"
+
+#: src/widgets/MainBox.vala:42
+msgid "Create one"
+msgstr "Создать"
+
+#: src/widgets/MainBox.vala:42
+msgid "Create a new empty wineprefix"
+msgstr "Создать новый Wineprefix"
+
+#: src/widgets/Headerbar.vala:35
+msgid "Create a new prefix"
+msgstr "Создать новый Prefix"
+
+#: src/widgets/Headerbar.vala:40
+msgid "Search for wineprefixes"
+msgstr "Найти Wineprefix"
+
+#: src/widgets/AppsList.vala:65
+msgid "Remove Prefix"
+msgstr "Удалить Prefix"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:4
+#: data/com.github.aggalex.wineglass.appdata.xml.in:8
+msgid "Wineglass"
+msgstr "Wineglass"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:5
+#: data/com.github.aggalex.wineglass.appdata.xml.in:9
+msgid "A GUI for Wine"
+msgstr "Пользовательский графический интерфейс для Wine"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:6
+msgid "Wine Frontent"
+msgstr "Интерфейс для Wine"
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:8
+msgid "com.github.aggalex.wineglass"
+msgstr ""
+
+#: data/com.github.aggalex.wineglass.desktop.in.in:11
+msgid "Wine;Windows;run;exe;app;"
+msgstr ""
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:11
+msgid ""
+"Wineglass is a small application that allows the user to manage their "
+"wineprefixes easily and install windows programs without the need of the "
+"terminal. It can:"
+msgstr "Wineglass - маленькое приложение, позволяющее пользователю управлять "
+"Wineprefix'ами проще и устанавливать Windows приложения без терминала. Оно может:"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:13
+msgid "Easily create and remove wineprefixes"
+msgstr "Легко создавать и удалять Winprefix'ы"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:14
+msgid "Install supported windows apps on their corresponding wineprefix"
+msgstr "Устанавливать поддерживаемые Windows приложения в соответствующие Winprefix'ы"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:15
+msgid "Make installed apps available normally through the applications menu."
+msgstr "Давать доступ к установленным приложениям из меню приложений"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:16
+msgid ""
+"Provide an easy way to add windows libraries to wineprefixes through "
+"\"winetricks\"."
+msgstr ""
+"Более просто добавлять Windows библиотеки через Winetricks"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:17
+msgid "Configure wine"
+msgstr "Crонфигурировать Wine"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:18
+msgid "run winprefix-specific system apps"
+msgstr "Запускать системные приложения, специфичные для Winprefix"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:20
+msgid ""
+"This app is useful for running windows apps and games easily without hustle."
+msgstr ""
+"Это приложение поможет запускать Windows приложения и игры без мороки"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:25
+msgid "changelog:"
+msgstr "Список изменений:"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:27
+msgid "Added translation support"
+msgstr "Добавлена поддержка переводов"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:28
+msgid "Added .msi support"
+msgstr "Добавлена поддержка .msi"
+
+#: data/com.github.aggalex.wineglass.appdata.xml.in:65
+msgid "Alex Angelou"
+msgstr ""
